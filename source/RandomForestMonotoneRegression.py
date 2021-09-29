@@ -184,7 +184,7 @@ class RandomForestClassifier(object):
                 if sign == "pos" :
                     if test_row_pred >= row_pred:
                         mono_count = mono_count + 1 
-                elif sign == "pos" :
+                elif sign == "neg" :
                     if test_row_pred <= row_pred:
                         mono_count = mono_count + 1 
                         
