@@ -9,7 +9,7 @@ Created on Wed Nov  4 08:51:59 2020
 import random
 import numpy as np
 import copy
-from support.Functions import most_frequent
+from source.Functions import most_frequent
 from sklearn.tree import DecisionTreeClassifier
 
 class RandomForestClassifier(object):
