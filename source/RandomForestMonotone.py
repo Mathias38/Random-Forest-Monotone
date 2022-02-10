@@ -181,8 +181,8 @@ class RandomForestClassifier(object):
                     test_row[idx] = int(round((var_values[1] * ((i + 1) / nb_test_mono)), 0))
                     
                 elif var_type == "c":
-                    row[idx] = int(round((var_values[1] * (i / nb_test_mono)), 0))
-                    test_row[idx] = int(round((var_values[1] * ((i + 1) / nb_test_mono)), 0))
+                    row[idx] = var_values[1] * (i / nb_test_mono)
+                    test_row[idx] = var_values[1] * ((i + 1) / nb_test_mono)
                     
                 test_row_pred = tree.predict(np.array(test_row).reshape(1,-1))
                 row_pred = tree.predict(np.array(row).reshape(1,-1))
