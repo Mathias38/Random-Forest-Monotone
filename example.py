@@ -44,11 +44,11 @@ rf_monotone = RandomForestClassifier(nb_trees=100, max_features = None)
 rf.fit(x,y)
 rf_monotone.fit_with_monotony_drop_out(x,  
                                        y,
-                                       500,
+                                       50,
                                        [0, 1],  
                                        [],
                                        [100, 100],
-                                       [100, 100],
+                                       [10, 10],
                                        [])
 
 preds = rf.pred(x_test_list)
